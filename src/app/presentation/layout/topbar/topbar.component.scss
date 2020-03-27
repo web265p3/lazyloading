@@ -1,0 +1,113 @@
+@import '../../../../styles.scss';
+
+@mixin bs-vertical-center() {
+   display: flex;
+   align-items: center;
+}
+
+.bs-topbar-outer {
+   width: 100%;
+   .bs-topbar-main {
+      height: 50px;
+      color: #fff;
+      font-size: 20px;
+      background-color: $bs-primary-color;
+      display: flex;
+      .bs-topbar-logo {
+         background-image: url('../../../../assets/icons/global/o365apps.png');
+         background-repeat: no-repeat;
+         background-size: 21px;
+         background-position: 15px center;
+         flex-basis: 140px;
+         flex-shrink: 0;
+         @include bs-vertical-center;
+         padding-left: 63px;
+      }
+      .bs-topbar-search {
+         flex-grow: 1;
+         @include bs-vertical-center;
+         justify-content: center;
+         .bs-search-field {
+            position: relative;
+            .bs-icon-search {
+               position: absolute;
+               color: rgb(0, 120, 212);
+               font-size: 16px;
+               top: 9px;
+               left: 9px;
+            }
+            input {
+               height: 32px;
+               width: 468px;
+               background-color: #e1dfdd;
+               border-radius: 3px;
+               border: none;
+               padding-left: 40px;
+               color: #000;
+            }
+         }
+      }
+      .bs-icon-settings-streamline-1 {
+         flex-basis: 40px;
+         flex-shrink: 0;
+         justify-content: center;
+         @include bs-vertical-center;
+      }
+      .bs-topbar-question {
+         flex-basis: 40px;
+         flex-shrink: 0;
+         @include bs-vertical-center;
+         justify-content: center;
+      }
+      .bs-user-info {
+         flex-basis: 150px;
+         flex-shrink: 0;
+         font-size: 15px;
+         @include bs-vertical-center;
+         justify-content: center;
+      }
+   }
+   .bs-topbar-head {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eaeaea;
+      border-top: 1px solid #eaeaea;
+      .bs-logo {
+         margin-left: 30px;
+         cursor: pointer;
+         img {
+            width: 65px;
+            height: 65px;
+         }
+      }
+      .bs-headline {
+         margin-left: 20px;
+         margin-top: -17px;
+      }
+   }
+   .bs-topbar-hubnavigation {
+      @include bs-vertical-center;
+      height: 38px;
+      ul {
+         list-style: none;
+         margin: 0;
+         li {
+            float: left;
+            a {
+               text-decoration: none;
+               color: rgb(102, 102, 102);
+               margin-left: 10px;
+               margin-right: 10px;
+               $microsoft-hubside-hover-color: rgb(0, 120, 212);
+               &:hover {               
+                  color: $microsoft-hubside-hover-color;
+               }
+               &.active {  
+                  color: $microsoft-hubside-hover-color;
+               }                 
+            }            
+         }
+      }
+   }
+}

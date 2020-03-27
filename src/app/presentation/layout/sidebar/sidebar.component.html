@@ -1,0 +1,10 @@
+<div class="bs-sidebar">
+   <ul>
+      <li *ngFor="let menuItem of menuItems">
+         <a [routerLink]="menuItem.Url"
+            routerLinkActive="active">
+            {{menuItem.Title}}
+         </a>
+      </li>
+   </ul>        
+</div>

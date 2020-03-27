@@ -1,0 +1,42 @@
+<div class="bs-topbar-outer">
+   <div class="bs-topbar-main">
+      <div class="bs-topbar-logo">BasicSource</div>
+      <div class="bs-topbar-search">
+         <div class="bs-search-field">
+            <div class="bs-icon-search"></div>
+            <input type="text" placeholder="Search files">
+         </div>
+      </div>
+      <div class="bs-icon-settings-streamline-1">
+
+      </div>
+      <div class="bs-topbar-question">
+         ?
+      </div>
+      <div class="bs-user-info">
+         David Elsner
+      </div>
+   </div>
+   <div class="bs-topbar-hubnavigation">
+      <ul>
+         <li *ngFor="let menuItem of menuItems">
+            <a [routerLink]="menuItem.Url"
+               routerLinkActive="active">
+               {{menuItem.Title}}
+            </a>
+         </li>
+      </ul>      
+   </div>
+   <div class="bs-topbar-head">
+      <div class="bs-logo"
+           routerLink="/home">
+         <img src="../../../../assets/icons/bsicon-darkblue.png">
+      </div>
+      <div class="bs-headline">
+         <h1>{{headline}}</h1>
+         <h2>{{subheadline}}</h2>
+      </div>
+   </div>
+</div>
+
+

@@ -1,0 +1,29 @@
+@import '../../../../styles.scss';
+
+.bs-sidebar {
+   width: 100%;
+   ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+         a {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            width: 100%;                     
+            padding-left: 20px;
+            color: black;
+            cursor: pointer;            
+            &:hover {
+               background-color: rgb(244, 244, 244);
+            }
+            &.active {
+               font-weight: bold;
+               background-color: rgba(244, 244, 244, 0.897);
+               border-left: 3px solid $bs-primary-color;
+            }            
+         }
+      }
+   }
+}
