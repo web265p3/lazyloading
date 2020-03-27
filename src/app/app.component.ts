@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { BSGlobals } from './core/services/bsglobals';
+import { globalNavigation } from './presentation/global-navigation';
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent  {
-  name = 'Angular';
+export class AppComponent {
+   title = 'BasicSource';
+   constructor(bsGlobals: BSGlobals) {
+      bsGlobals.navigation.updateGlobal(globalNavigation);
+   }
 }

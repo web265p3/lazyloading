@@ -1,4 +1,10 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<app-topbar></app-topbar>
+<div class="bs-outer">
+   <div class="bs-sidebar">
+      <app-sidebar></app-sidebar>
+   </div>
+   <div class="bs-content">
+      <router-outlet></router-outlet>
+   </div>
+</div>
+<app-footer></app-footer>

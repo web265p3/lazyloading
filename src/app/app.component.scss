@@ -1,0 +1,13 @@
+.bs-outer {
+   display: flex;
+   $sidebar-width: 200px;
+   .bs-sidebar {
+      flex-shrink: 0;
+      flex-basis: $sidebar-width;
+   }
+   .bs-content {
+      flex-grow: 1;
+      background-color: #fff;
+      padding: 10px;
+   }
+}
