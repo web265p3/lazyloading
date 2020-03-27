@@ -1,0 +1,35 @@
+@import './mixins.scss';
+
+$bs-primary-color: rgb(30, 58, 110);
+$bs-secondary-color: rgb(155, 57, 0);
+$bs-warn-color: rgb(90, 0, 0);
+.clear-both {
+   clear: both;
+}
+html, body { 
+   height: 100%;
+   font-family: Segoe UI;
+}
+body { 
+   h1 {
+       /** Overwrite material styles **/
+      margin: 0 0 0 0!important;
+      font-family: Segoe UI!important;
+   }
+   h2 {
+      /** Overwrite material styles **/
+      margin: 0 0 0 0!important;
+      font-family: Segoe UI!important;
+   }
+   margin: 0; 
+   font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+a {
+   $bs-link-color:  rgb(0, 11, 114);;
+   color: $bs-link-color;
+   @include bs-fast-transition();
+   text-decoration: none;
+   &:hover {
+      color: lighten($bs-link-color, 20%);
+   }
+}

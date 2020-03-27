@@ -1,0 +1,24 @@
+@mixin bs-shadow() {
+   -webkit-box-shadow: outset 0px 4px 22px -2px rgba(0,0,0,0.71);
+   -moz-box-shadow: outset 0px 4px 22px -2px rgba(0,0,0,0.71);
+   box-shadow: outset 0px 4px 22px -2px rgba(0,0,0,0.71); 
+}
+/** Global mixins ***/
+@mixin bs-fast-transition() {
+    -webkit-transition: all 300ms ease; /* Firefox */
+    -moz-transition: all 300ms ease; /* WebKit */
+    -o-transition: all 300ms ease; /* Opera */
+    transition: all 300ms ease; /* Standard */  
+}
+@mixin bs-middle-transition() {
+    -webkit-transition: all 600ms ease; /* Firefox */
+    -moz-transition: all 600ms ease; /* WebKit */
+    -o-transition: all 600ms ease; /* Opera */
+    transition: all 600ms ease; /* Standard */  
+}
+@mixin bs-slow-transition() {
+    -webkit-transition: all 900ms ease; /* Firefox */
+    -moz-transition: all 900ms ease; /* WebKit */
+    -o-transition: all 900ms ease; /* Opera */
+    transition: all 900ms ease; /* Standard */  
+}
